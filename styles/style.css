@@ -18,11 +18,18 @@
 }
 
 
+.container-main {
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: rosybrown;
+}
+
 .card-container {
     background-color: peachpuff;
     justify-content: space-between;
     gap: 15px;
-    max-width: 900 px;
+    max-width: 800px;
+    margin: 0 auto;
     flex-wrap: wrap;
 
     /* blocco card */
