@@ -5,10 +5,7 @@
 // Riferimenti DOM
 
 const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
-const errorMsg = document.querySelector('.error-content');     // diuv con msg errore
-
-console.log(loadingMsg); // test
-console.log(errorMsg);  // test
+const errorMsg = document.querySelector('.error-content');     // div con msg errore
 
 
 /*1. Costruire la fetch in js e farla funzionare**
@@ -16,7 +13,7 @@ console.log(errorMsg);  // test
 - setta correttamente sia catch che finally restituendo allútente update su cosa sta succedendo in pagina
 - dentro il .then dovremo arcodare una funzione per gestire la creazione delle card scorrendo lárray degli oggetti*/
 
-const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
+const API_URL = 'https://lanciweb.github.io/demo/FAKEapi/pictures/'; // dichiaro variabile per API 
 // manomissione API URL per test
 
 fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
@@ -28,7 +25,8 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
     })
     .catch ((error) => { // SE si risolve in caso negativo
         console.log('error'); // check
-        
+        // rimuoviamo la d-none se c'e risoluzione negativa
+        errorMsg.classList.remove('d-none');
     })
 
 
