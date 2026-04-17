@@ -28,5 +28,8 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         // rimuoviamo la d-none se c'e risoluzione negativa
         errorMsg.classList.remove('d-none');
     })
+    .finally (() => { // PIANO TEMPORALE ULTIMO, SI VERIFICA IN OGNI TIPO DI RISOLUZIONE
+        loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
+    })
 
 
