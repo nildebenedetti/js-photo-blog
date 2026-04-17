@@ -15,6 +15,9 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
     })
     .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
         console.log(jsonData); // stampero'in console per check
+    })
+    .catch ((error) => { // SE si risolve in caso negativo
+        console.log('error'); // check
         
     })
 
