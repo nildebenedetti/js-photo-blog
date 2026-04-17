@@ -91,6 +91,15 @@
 
             }
 
+            .pin-container {
+                position: absolute;
+            }
+            .pin {
+                position:relative;
+                translate: 100px -25px;
+                width: 1.6rem;
+            }
+
         }
 
     }
