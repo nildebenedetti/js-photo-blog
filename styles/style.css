@@ -79,8 +79,8 @@ body {
         max-width: 250px;
         background-color: white;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         padding: 20px;
         box-shadow: /* uso doppia ombra con bassa opaciita'per effetto naturale */
             0 2px 4px rgba(0, 0, 0, 0.53), 
@@ -92,7 +92,7 @@ body {
         }
 
         .photocard-container {
-
+            width:100%;
             .photo {
                 width: 100%;
 
@@ -100,12 +100,12 @@ body {
 
             .pin-container {
                 position: absolute;
-                width:100%;
             }
             .pin {
                 position:relative;
                 width: 1.6rem;
-                left: 50%
+                left: 300%;
+                transform: translate(50%, -120%);
             }
 
         }
