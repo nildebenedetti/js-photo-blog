@@ -21,4 +21,5 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         console.log('error'); // check
         
     })
+    
 

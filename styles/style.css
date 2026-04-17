@@ -6,3 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Utilities */
+
+.d-none {
+    display: none;
+}
