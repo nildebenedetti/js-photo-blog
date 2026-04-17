@@ -1,7 +1,5 @@
 /* media query per layout responsive */
 
-
-
 .container-main {
     margin: 0 auto;
     padding: 15px 0;
@@ -24,7 +22,7 @@
     }
 }
 
-
+/* tablet */
 
 @media screen and (min-width:768px) {
     .container-main {
@@ -54,6 +52,7 @@
     }
 }
 
+/* desktop */
 
 @media screen and (min-width:992px) {
 
