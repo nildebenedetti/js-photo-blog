@@ -21,7 +21,12 @@ const cardContainer = document.querySelector('.card-container'); // card contain
  */
 
 function returnCards(ArrayofObjects) {
+    let tempContent = ''; // dichiaro stringa vuota da riempire a ogni giro del for of
 
+    for ( const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
+       
+    }
+    
     
 }
 
