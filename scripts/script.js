@@ -17,29 +17,26 @@ const cardContainer = document.querySelector('.card-container'); // card contain
 // utilizzando un for of per scorrere tutti gli indici e prendere quello che serve
 
 /**
- * @param {{idEl: string, titleEl: string, dateEl: string, imgUrlEl: string}[]} ArrayofObjects
+ * @param {{dateEl: string, idEl: string, titleEl: string, imgUrlEl: string}[]} ArrayofObjects
  */
 
-function returnCards(ArrayofObjects) {
+function returnCards (ArrayofObjects) {
     let tempContent = ''; // dichiaro stringa vuota da riempire a ogni giro del for of
 
     for ( const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
-        tempContent += 
-        `<!-- card #${idEl}-->
-            <div class="card memory-${idEl} d-flex">
+        tempContent += `<!-- card #${ArrayofObjects.idEl}-->
+            <div class="card memory-${ArrayofObjects.idEl} d-flex">
                 <div class="photo-container">
-                    <img src="${imgUrlEl}" alt="${titleEl}" class="photo">
+                    <img src="${ArrayofObjects.imgUrlEl}" alt="${ArrayofObjects.titleEl}" class="photo">
                     <div class="photo-caption">
-                        <p class="memory-date">${dateEl}</p>
-                        <p class="memory-name">${titleEl}</p>
+                        <p class="memory-date">${ArrayofObjects.dateEl}</p>
+                        <p class="memory-name">${ArrayofObjects.titleEl}</p>
                     </div>
                 </div>
-            </div>`
+            </div>`;
     }
-    
-    
-    
-}
+    return cardContainer.innerHTML = tempContent;
+};
 
 
 /*1. Costruire la fetch in js e farla funzionare**
@@ -53,15 +50,17 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
     })
     .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
         // inizio a costruire le mie card in questo piano temporale
+        console.log(jsonData);
+        
         returnCards(jsonData);
     })
     .catch ((error) => { // SE si risolve in caso negativo
-        console.log('error'); // check
+        console.log(error); // check
         // rimuoviamo la d-none se c'e risoluzione negativa
         errorMsg.classList.remove('d-none');
     })
     .finally (() => { // PIANO TEMPORALE ULTIMO, SI VERIFICA IN OGNI TIPO DI RISOLUZIONE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
-    })
+    });
 
 
