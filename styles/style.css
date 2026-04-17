@@ -42,7 +42,6 @@
 }
 
 
-
 /* header */
 
 .blog-header {
@@ -58,7 +57,7 @@
 .container-main {
     margin: 0 auto;
     padding: 50px 0;
-    background-color: rosybrown;
+    background-image: url(../img/cork.png);
 }
 
 .card-container {
