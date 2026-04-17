@@ -6,6 +6,8 @@
 
 const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
 const errorMsg = document.querySelector('.error-content');     // div con msg errore
+const cardContainer = document.querySelector('.card-container'); // card container
+
 
 //======== MY FUNCTIONS =======//
 
@@ -19,7 +21,7 @@ const errorMsg = document.querySelector('.error-content');     // div con msg er
  */
 
 function returnCards(ArrayofObjects) {
-    console.log(ArrayofObjects); //test 
+
     
 }
 
