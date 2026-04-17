@@ -25,7 +25,7 @@
     max-width: 900 px;
     flex-wrap: wrap;
 
-
+    /* blocco card */
     .card {
         background-color: white;
         width: calc((100% / 3) - (15px * 2)/3); /* layout a 3 colonne (desktop) */
@@ -33,7 +33,19 @@
         align-items: center;
         padding: 15px;
 
-        
+        /*elementi card*/
+        .photo-caption {
+            padding-top: 8px;
+        }
+
+        .photo-container {
+
+            .photo {
+                width: 100%;
+
+            }
+
+        }
 
     }
 }
