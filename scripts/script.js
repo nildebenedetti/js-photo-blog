@@ -29,8 +29,8 @@ function returnCards(ArrayofObjects) {
                 <div class="photo-container">
                     <img src="${object.url}" alt="${object.title}" class="photo">
                     <div class="photo-caption">
-                        <p class="memory-date">${object.date}</p>
-                        <p class="memory-name">${object.title}</p>
+                        <p class="memory-date date-font">${object.date}</p>
+                        <p class="memory-name title-font">${object.title}</p>
                     </div>
                 </div>
             </div>`
