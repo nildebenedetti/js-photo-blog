@@ -26,7 +26,10 @@ function returnCards(ArrayofObjects) {
     for ( const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
         tempContent += `<!-- card #${object.id}--> 
             <div class="card memory-${object.id} d-flex">
-                <div class="photo-container">
+                <div class="photocard-container">
+                    <div class="pin-container">
+                        <img src="./img/pin.svg" alt="" class="pin">
+                    </div>
                     <img src="${object.url}" alt="${object.title}" class="photo">
                     <div class="photo-caption">
                         <p class="memory-date date-font">${object.date}</p>
