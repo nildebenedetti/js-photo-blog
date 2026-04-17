@@ -28,11 +28,6 @@
                 padding-top: 8px;
             }
 
-            .pin {
-                position: relative;
-                translate: 100px -25px;
-                width: 1.6rem;
-            }
         }
     }
 }
@@ -62,11 +57,6 @@
                 padding-top: 8px;
             }
 
-            .pin {
-                position: relative;
-                translate: 100px -25px;
-                width: 1.6rem;
-            }
         }
     }
 }
