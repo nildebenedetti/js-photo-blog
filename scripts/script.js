@@ -7,7 +7,7 @@
 - setta correttamente sia catch che finally restituendo allútente update su cosa sta succedendo in pagina
 - dentro il .then dovremo arcodare una funzione per gestire la creazione delle card scorrendo lárray degli oggetti*/
 
-const API_URL = 'https://lanciweb.github.io/FAKE/demo/api/pictures/'; // dichiaro variabile per API 
+const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
 // manomissione API URL per test
 
 fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
