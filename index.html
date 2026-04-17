@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Blog</title>
     <!-- stylesheet -->
-    <link  rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <!-- User message: Loading -->
     <div class="loading-content">
@@ -14,18 +16,30 @@
             In caricamento...
         </h1>
     </div>
-    <!-- User message: Error-->
-     <div class="error-content d-none ">
-        <h1 class="error-message">
-            Errore nel caricamento del contenuto: ricarica la pagina
-        </h1>
 
+    <!-- User message: Error-->
+        <div class="error-content d-none ">
+            <h1 class="error-message">
+                Errore nel caricamento del contenuto: ricarica la pagina
+            </h1>
+        </div>
+    
     <!-- Card Container -->
-     <div class="card-container">
-        <!-- QUI inseriro' le mie card -->
-     </div>
-     </div>
+            <div class="card-container d-flex">
+                <!-- QUI inseriro' le mie card -->
+                <div class="card d-flex">
+                    <div class="photo-container">
+                        <img src="" alt="placeholder" class="photo">
+                        <div class="photo-label">
+                            <p class="photocaption">I am a placeholder text</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
     <!-- scripts -->
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
