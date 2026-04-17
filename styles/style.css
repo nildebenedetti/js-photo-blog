@@ -51,37 +51,42 @@
     padding: 30px 0;
 }
 
+/* background */
+body {
+    background-image: url(../img/cork.png);
+}
 
 /* main */
 
 .container-main {
     margin: 0 auto;
-    padding: 50px 0;
-    background-image: url(../img/cork.png);
+    padding: 15px 0;
+
 }
 
 .card-container {
-    
+    flex-direction: row;
     justify-content: space-between;
-    gap: 15px;
-    max-width: 800px;
+    padding:20px 100px;
+    gap: 25px;
+    max-width: 500px;
     margin: 0 auto;
     flex-wrap: wrap;
 
     /* blocco card */
     .card {
+        width: 250px;
         background-color: white;
-        width: calc((100% / 3) - (15px * 2)/3); /* layout a 3 colonne (desktop) */
         flex-direction: column;
-        align-items: center;
-        padding: 15px;
+        justify-content: center;
+        padding: 20px;
         box-shadow: /* uso doppia ombra con bassa opaciita'per effetto naturale */
             0 2px 4px rgba(0, 0, 0, 0.53), 
             0 8px 16px rgba(0, 0, 0, 0.409);
 
         /*elementi card*/
         .photo-caption {
-            padding-top: 8px;
+            padding-top: 2px;
         }
 
         .photocard-container {
