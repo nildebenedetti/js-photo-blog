@@ -2,7 +2,7 @@
 
 // @ts--check
 
-//======== MY FUNCTIONS =======//
+//=============== MY FUNCTIONS =============//
 
 // prende come argomento un array di oggetti
 // struttura una card in html 
@@ -34,12 +34,16 @@ function returnCards(ArrayofObjects) {
     return cardContainer.innerHTML = tempContent;
 };
 
-// Riferimenti DOM
+//==========================================//
+
+//========== Riferimenti DOM ===============//
 
 const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
 const errorMsg = document.querySelector('.error-content');     // div con msg errore
 const cardContainer = document.querySelector('.card-container'); // card container
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
+
+//=========================================//
 
 fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
     .then ((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
