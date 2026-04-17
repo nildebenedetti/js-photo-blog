@@ -17,15 +17,26 @@ const cardContainer = document.querySelector('.card-container'); // card contain
 // utilizzando un for of per scorrere tutti gli indici e prendere quello che serve
 
 /**
- * @param {{idEl: string, dateEl: string, imgUrlEl: string}[]} ArrayofObjects
+ * @param {{idEl: string, titleEl: string, dateEl: string, imgUrlEl: string}[]} ArrayofObjects
  */
 
 function returnCards(ArrayofObjects) {
     let tempContent = ''; // dichiaro stringa vuota da riempire a ogni giro del for of
 
     for ( const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
-       
+        tempContent += 
+        `<!-- card #${idEl}-->
+            <div class="card memory-${idEl} d-flex">
+                <div class="photo-container">
+                    <img src="${imgUrlEl}" alt="${titleEl}" class="photo">
+                    <div class="photo-caption">
+                        <p class="memory-date">${dateEl}</p>
+                        <p class="memory-name">${titleEl}</p>
+                    </div>
+                </div>
+            </div>`
     }
+    
     
     
 }
