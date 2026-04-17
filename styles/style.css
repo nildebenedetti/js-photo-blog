@@ -75,10 +75,12 @@ body {
 
     /* blocco card */
     .card {
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
         background-color: white;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding: 20px;
         box-shadow: /* uso doppia ombra con bassa opaciita'per effetto naturale */
             0 2px 4px rgba(0, 0, 0, 0.53), 
@@ -98,11 +100,12 @@ body {
 
             .pin-container {
                 position: absolute;
+                width:100%;
             }
             .pin {
                 position:relative;
-                translate: 100px -25px;
                 width: 1.6rem;
+                left: 50%
             }
 
         }
