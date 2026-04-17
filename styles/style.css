@@ -16,3 +16,17 @@
 .d-flex {
     display: flex;
 }
+
+
+.card-container {
+    background-color: peachpuff;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 900 px;
+
+
+    .card {
+        background-color: rosybrown;
+        width: calc((100% / 3) - (15px * 2)/3); /* layout a 3 colonne (desktop) */
+    }
+}
