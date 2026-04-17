@@ -27,7 +27,13 @@
 
 
     .card {
-        background-color: rosybrown;
+        background-color: white;
         width: calc((100% / 3) - (15px * 2)/3); /* layout a 3 colonne (desktop) */
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+
+        
+
     }
 }
