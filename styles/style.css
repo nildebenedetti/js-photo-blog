@@ -17,6 +17,17 @@
     display: flex;
 }
 
+/* header */
+
+.blog-header {
+    margin: 0 auto;
+    text-align: center;
+    background-color: peachpuff;
+    padding: 30px 0;
+}
+
+
+/* main */
 
 .container-main {
     margin: 0 auto;
