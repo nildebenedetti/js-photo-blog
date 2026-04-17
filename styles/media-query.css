@@ -1,8 +1,30 @@
 /* media query per layout responsive */
 
-/* .card-container{
-    max-width: 450px;
-} */
+
+
+.container-main {
+    margin: 0 auto;
+    padding: 15px 0;
+
+}
+
+.card-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px 100px;
+    gap: 25px;
+    max-width: 500px;
+
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+}
+
+
 
 @media screen and (min-width:768px) {
     .container-main {
