@@ -7,6 +7,30 @@
     box-sizing: border-box;
 }
 
+/* fonts */
+
+.date-font {
+  font-family: "Sometype Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+}
+
+.title-font {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: <300>;
+  font-style: normal;
+}
+
+.header-font {
+  font-family: "Lexend Giga", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <700>;
+  font-style: normal;
+}
+
+
 /* Utilities */
 
 .d-none {
@@ -16,6 +40,8 @@
 .d-flex {
     display: flex;
 }
+
+
 
 /* header */
 
