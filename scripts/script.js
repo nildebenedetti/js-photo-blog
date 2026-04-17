@@ -14,6 +14,10 @@ const errorMsg = document.querySelector('.error-content');     // div con msg er
 // valorizza la card con i dati presenti nellárray di oggetti
 // utilizzando un for of per scorrere tutti gli indici e prendere quello che serve
 
+/**
+ * @param {{idEl: string, dateEl: string, imgUrlEl: string}[]} ArrayofObjects
+ */
+
 function returnCards(ArrayofObjects) {
     console.log(ArrayofObjects); //test 
     
