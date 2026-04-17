@@ -2,13 +2,6 @@
 
 // @ts--check
 
-// Riferimenti DOM
-
-const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
-const errorMsg = document.querySelector('.error-content');     // div con msg errore
-const cardContainer = document.querySelector('.card-container'); // card container
-
-
 //======== MY FUNCTIONS =======//
 
 // prende come argomento un array di oggetti
@@ -41,9 +34,11 @@ function returnCards(ArrayofObjects) {
     return cardContainer.innerHTML = tempContent;
 };
 
-/*1. Costruire la fetch in js e farla funzionare**
-- dentro il .then dovremo arcodare una funzione per gestire la creazione delle card scorrendo lárray degli oggetti*/
+// Riferimenti DOM
 
+const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
+const errorMsg = document.querySelector('.error-content');     // div con msg errore
+const cardContainer = document.querySelector('.card-container'); // card container
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
 
 fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
@@ -51,8 +46,7 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         return result.json(); // quando avro'i dati, li converto con il method json e li restituisco al prossimo then
     })
     .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
-        // inizio a costruire le mie card in questo piano temporale
-        console.log(jsonData);
+        // invoco funzione per aggiungere card
         returnCards(jsonData);
     })
     .catch ((error) => { // SE si risolve in caso negativo
@@ -63,5 +57,4 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
     .finally (() => { // PIANO TEMPORALE ULTIMO, SI VERIFICA IN OGNI TIPO DI RISOLUZIONE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
     });
-
 
