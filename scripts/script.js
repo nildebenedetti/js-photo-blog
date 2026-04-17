@@ -2,6 +2,15 @@
 
 // @ts--check
 
+// Riferimenti DOM
+
+const loadingMsg = document.querySelector('.loading-content'); // div con msg caricamento
+const errorMsg = document.querySelector('.error-content');     // diuv con msg errore
+
+console.log(loadingMsg); // test
+console.log(errorMsg);  // test
+
+
 /*1. Costruire la fetch in js e farla funzionare**
 - controlla che la richiesta venga processata correttamente con il method json()
 - setta correttamente sia catch che finally restituendo allútente update su cosa sta succedendo in pagina
@@ -21,5 +30,5 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         console.log('error'); // check
         
     })
-    
+
 
