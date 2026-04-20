@@ -42,7 +42,8 @@ const loadingMsg = document.querySelector('.loading-content'); // div con msg ca
 const errorMsg = document.querySelector('.error-content');     // div con msg errore
 const cardContainer = document.querySelector('.card-container'); // card container
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
-const modalImage = document.querySelector('.modal-image'); // imamgine del modale
+const modalImage = document.querySelector('.modal-image'); // immagine del modale
+const modalContainer = document.querySelector('.modal-container') // container del modale
 
 //=========================================//
 
@@ -82,8 +83,8 @@ function picClickHandler () {
     // ova vado a mettere nel mio modale img e alt
     modalImage.src = clickedCardImageSrc;
     modalImage.alt = clickedCardImageAlt;
+    //
 
-    
 
 
 
