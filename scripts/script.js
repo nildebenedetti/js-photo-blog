@@ -90,11 +90,11 @@ function picClickHandler () {
 }
 
 
-btnCloseModal.addEventListener('click', btnCloseModalHandler);
+btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adventlistener per bottone di chiusura del modale
 
-function btnCloseModalHandler () {
-    modalContainer.classList.remove('d-flex');
-    modalContainer.classList.add('d-none');
+function btnCloseModalHandler () { // quando click, 
+    modalContainer.classList.remove('d-flex'); // tolgo d-flex
+    modalContainer.classList.add('d-none'); // add d-none e adios modale
 } 
 
 
