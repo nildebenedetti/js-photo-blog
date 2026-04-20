@@ -26,6 +26,16 @@
     font-size: 36px;
 }
 
+.modal-image {
+    max-width: 300px;
+
+}
+
+.close-btn {
+    transform: translate(205px, -245px); /* posizioniamo sta icona */
+
+}
+
 /* tablet */
 
 @media screen and (min-width:768px) {
@@ -58,6 +68,26 @@
     .blog-header {
         font-size: 32px;
     }
+
+    .modal-image {
+        max-width: 400px;
+
+    }
+
+    .btn-carousel-prev {
+        transform: translate(-220px, -10px);
+        /* posizioniamo sta icona */
+    }
+
+    .btn-carousel-nxt {
+        transform: translate(220px, -10px);
+        /* posizioniamo sta icona */
+    }
+
+     .close-btn {
+        transform: translate(210px, -260px);
+    }
+
 }
 
 /* desktop */
@@ -91,5 +121,24 @@
 
     .blog-header {
         font-size: 28px;
+    }
+
+    .modal-image {
+        max-width: 500px;
+
+    }
+
+    .btn-carousel-prev {
+        transform: translate(-260px, -10px);
+        /* posizioniamo sta icona */
+    }
+
+    .btn-carousel-nxt {
+        transform: translate(255px, -10px);
+        /* posizioniamo sta icona */
+    }
+
+    .close-btn {
+        transform: translate(260px, -300px);
     }
 }

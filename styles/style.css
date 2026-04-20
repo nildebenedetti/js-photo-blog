@@ -158,7 +158,7 @@ body {
 }
 
 .modal-image {
-    max-width: 400px;
+    max-width: 300px;
 
 }
 
@@ -170,10 +170,10 @@ body {
 
 .btn-carousel-prev {
     position: relative; /* relativizzo posizione in base a .modal */
-    transform: translate(-215px, -10px); /* posizioniamo sta icona */
+    transform: translate(-200px, -10px); /* posizioniamo sta icona */
 }
 
 .btn-carousel-nxt {
     position: relative; /* relativizzo posizione in base a .modal */
-    transform: translate(215px, -10px); /* posizioniamo sta icona */
+    transform: translate(190px, -10px); /* posizioniamo sta icona */
 }
