@@ -83,11 +83,8 @@ function picClickHandler () {
     // ova vado a mettere nel mio modale img e alt
     modalImage.src = clickedCardImageSrc;
     modalImage.alt = clickedCardImageAlt;
-    //
-
-
-
-
-
+    // tolgo d-none e aggiungo d-flex
+    modalContainer.classList.remove('.d-none');
+    modalContainer.classList.add('d-flex');
 }
 
