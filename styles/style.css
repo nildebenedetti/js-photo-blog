@@ -151,7 +151,7 @@ body {
 
 .close-btn {
     color: white;
-    font-size: 24px;
+    font-size: 30px;
     position: relative; /* relativizzo posizione in base a .modal */
     transform: translate(205px, -245px); /* posizioniamo sta icona */
     cursor: pointer; /* ci mette il ditinooo */
@@ -164,6 +164,16 @@ body {
 
 .btn-carousel-prev, .btn-carousel-nxt {
     color: white;
-    font-size: 24px;
+    font-size: 45px;
     z-index: 9999; /* appena sopra il modal-container */
+}
+
+.btn-carousel-prev {
+    position: relative; /* relativizzo posizione in base a .modal */
+    transform: translate(-215px, -10px); /* posizioniamo sta icona */
+}
+
+.btn-carousel-nxt {
+    position: relative; /* relativizzo posizione in base a .modal */
+    transform: translate(215px, -10px); /* posizioniamo sta icona */
 }
