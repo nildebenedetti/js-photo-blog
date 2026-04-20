@@ -51,6 +51,10 @@
     padding: 30px 0;
 }
 
+.blog-header {
+    font-size: 32px;
+}
+
 /* background */
 body {
     background-image: url(../img/cork.png);
