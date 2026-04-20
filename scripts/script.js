@@ -16,7 +16,7 @@
 function returnCards(ArrayofObjects) {
     let tempContent = ''; // dichiaro stringa vuota da riempire a ogni giro del for of
 
-    for ( const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
+    for (const object of ArrayofObjects) { // per ogni oggetto dell'arrauy
         tempContent += `<!-- card #${object.id}--> 
             <div class="card memory-${object.id} d-flex">
                 <div class="photocard-container">
@@ -38,7 +38,7 @@ function returnCards(ArrayofObjects) {
 
 // PER LA GESTIONE DEL CLICK SULLE FOTO DELLA GALLERY
 
-function picClickHandler () {
+function picClickHandler() {
     const card = event.target.closest('.card'); // il click mi deve selezionare la card con closest(.card) 
     if (!card) return; // capiamo se e'stat cliccata una card, altrimenti non fare nulla
 
@@ -56,10 +56,10 @@ function picClickHandler () {
 
 // PER LA GESTIONE DEL CLICK DI USCITA DA MODALE
 
-function btnCloseModalHandler () { // quando click, 
+function btnCloseModalHandler() { // quando click, 
     modalContainer.classList.remove('d-flex'); // tolgo d-flex
     modalContainer.classList.add('d-none'); // add d-none e adios modale
-} 
+}
 
 
 //==========================================//
@@ -73,23 +73,24 @@ const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro var
 const modalImage = document.querySelector('.modal-image'); // immagine del modale
 const modalContainer = document.querySelector('.modal-container'); // container del modale
 const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiudere modale
+let myImgSlider = {};
 
 //=========================================//
 
 fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
-    .then ((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
+    .then((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
         return result.json(); // quando avro'i dati, li converto con il method json e li restituisco al prossimo then
     })
-    .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
+    .then((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
         // invoco funzione per aggiungere card
         returnCards(jsonData);
     })
-    .catch ((error) => { // SE si risolve in caso negativo
+    .catch((error) => { // SE si risolve in caso negativo
         console.log(error); // check
         // rimuoviamo la d-none se c'e risoluzione negativa
         errorMsg.classList.remove('d-none');
     })
-    .finally (() => { // PIANO TEMPORALE ULTIMO, SI VERIFICA IN OGNI TIPO DI RISOLUZIONE
+    .finally(() => { // PIANO TEMPORALE ULTIMO, SI VERIFICA IN OGNI TIPO DI RISOLUZIONE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
     });
 
@@ -101,20 +102,27 @@ btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adven
 // con la fetch mi creo un oggetto
 
 
-const myArrayStringato = fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
-    .then ((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
+fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
+    .then((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
         return result.json(); // quando avro'i dati, li converto con il method json e li restituisco al prossimo then
     })
-    .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
+    .then((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
         // con questi dati e un ciclo for io mi creo il mio oggetto 
         const arrayStringato = JSON.stringify(jsonData);
-        return arrayStringato;
+        myImgSlider = {
+            Image: myArrayStringato,
+            currentIndex: '0'
+        }
+        return myImgSlider;
     })
-    .catch ((error) => { // SE si risolve in caso negativo
+    .catch((error) => { // SE si risolve in caso negativo
         console.log(error); // check
         // rimuoviamo la d-none se c'e risoluzione negativa
         errorMsg.classList.remove('d-none');
     })
 
-//
-    
+// creo oggetto per slider
+
+console.log(myImgSlider);
+
+
