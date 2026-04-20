@@ -97,4 +97,24 @@ cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventli
 
 btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adventlistener per bottone di chiusura del modale
 
+// mi creo un oggetto con al suo interno un altro oggetto e currentIndex
+// con la fetch mi creo un oggetto
 
+
+const myArrayStringato = fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
+    .then ((result) => { // promessa di restituire dati - PIANO TEMPORALE CODICE ASINCRONO 1
+        return result.json(); // quando avro'i dati, li converto con il method json e li restituisco al prossimo then
+    })
+    .then ((jsonData) => { // quando avro' i dati - PIANO TEMPORALE CODICE ASINCRONO 2
+        // con questi dati e un ciclo for io mi creo il mio oggetto 
+        const arrayStringato = JSON.stringify(jsonData);
+        return arrayStringato;
+    })
+    .catch ((error) => { // SE si risolve in caso negativo
+        console.log(error); // check
+        // rimuoviamo la d-none se c'e risoluzione negativa
+        errorMsg.classList.remove('d-none');
+    })
+
+//
+    
