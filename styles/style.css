@@ -115,4 +115,15 @@ body {
         }
 
     }
+
+    .card:hover  {
+       rotate: -20deg; /* ruoto di 20 gradi a dx */
+       transition: transform 0.7s ease-in-out; /* faccio una transition lenta */
+       transform: scale(1.05); /* ingrandisco */
+       z-index: 999; /* metto in primo piano per scavalcare le pin delle altre card*/
+
+       .pin {
+        display: none; /* byeebye pin della card */
+       }
+    }
 }
