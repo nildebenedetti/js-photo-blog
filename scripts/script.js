@@ -43,7 +43,8 @@ const errorMsg = document.querySelector('.error-content');     // div con msg er
 const cardContainer = document.querySelector('.card-container'); // card container
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
 const modalImage = document.querySelector('.modal-image'); // immagine del modale
-const modalContainer = document.querySelector('.modal-container') // container del modale
+const modalContainer = document.querySelector('.modal-container'); // container del modale
+const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiudere modale
 
 //=========================================//
 
@@ -70,7 +71,7 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
 // passare la source come innertext di src e alt come alt
 // rimuovere classe d-none + add d-flex
 
-cardContainer.addEventListener('click', picClickHandler) // aggiungo addEventlistener a card container
+cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventlistener a card container
 
 function picClickHandler () {
     const card = event.target.closest('.card'); // il click mi deve selezionare la card con closest(.card) 
@@ -84,7 +85,16 @@ function picClickHandler () {
     modalImage.src = clickedCardImageSrc;
     modalImage.alt = clickedCardImageAlt;
     // tolgo d-none e aggiungo d-flex
-    modalContainer.classList.remove('.d-none');
+    modalContainer.classList.remove('d-none');
     modalContainer.classList.add('d-flex');
 }
+
+
+btnCloseModal.addEventListener('click', btnCloseModalHandler);
+
+function btnCloseModalHandler () {
+    modalContainer.classList.remove('d-flex');
+    modalContainer.classList.add('d-none');
+} 
+
 
