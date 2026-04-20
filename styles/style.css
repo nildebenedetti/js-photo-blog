@@ -137,7 +137,7 @@ body {
     position: fixed; /* lo posiziono a inizio pagina */
     top: 0;
     left:0;
-    z-index: 9999; /* sopra tutti gli altri pianiii */
+    z-index: 9998; /* sopra tutti gli altri pianiii */
     height: 100%; /* che occupi tutta la viewport */
     width: 100%;
     
@@ -160,4 +160,10 @@ body {
 .modal-image {
     max-width: 400px;
 
+}
+
+.btn-carousel-prev, .btn-carousel-nxt {
+    color: white;
+    font-size: 24px;
+    z-index: 9999; /* appena sopra il modal-container */
 }
