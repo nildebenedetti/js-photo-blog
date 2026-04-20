@@ -127,3 +127,16 @@ body {
        }
     }
 }
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.71);
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* lo posiziono a inizio pagina */
+    top: 0;
+    left:0;
+    z-index: 9999; /* sopra tutti gli altri pianiii */
+    height: 100%; /* che occupi tutta la viewport */
+    width: 100%;
+    
+}
