@@ -80,6 +80,10 @@ function picClickHandler () {
     const clickedCardImageAlt = clickedCardImage.alt // trovo il mio alt
 
     // ova vado a mettere nel mio modale img e alt
+    modalImage.src = clickedCardImageSrc;
+    modalImage.alt = clickedCardImageAlt;
+
+    
 
 
 
