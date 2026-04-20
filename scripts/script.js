@@ -42,6 +42,7 @@ const loadingMsg = document.querySelector('.loading-content'); // div con msg ca
 const errorMsg = document.querySelector('.error-content');     // div con msg errore
 const cardContainer = document.querySelector('.card-container'); // card container
 const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro variabile per API 
+const modalImage = document.querySelector('.modal-image'); // imamgine del modale
 
 //=========================================//
 
@@ -62,22 +63,26 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
     });
 
-// aggiungo addEventlistener a card container
-// il click mi deve selezionare la card con closest(.card)
+
+
 // recuperare img src
 // passare la source come innertext di src e alt come alt
 // rimuovere classe d-none + add d-flex
 
-
-cardContainer.addEventListener('click', picClickHandler) 
+cardContainer.addEventListener('click', picClickHandler) // aggiungo addEventlistener a card container
 
 function picClickHandler () {
-    const card = event.target.closest('.card'); // capiamo se e'stat cliccata una card
-    if (!card) return;
+    const card = event.target.closest('.card'); // il click mi deve selezionare la card con closest(.card) 
+    if (!card) return; // capiamo se e'stat cliccata una card, altrimenti non fare nulla
 
     const clickedCardImage = card.querySelector('.photo'); // identifico img
     const clickedCardImageSrc = clickedCardImage.src; // trovo src da passare al modale
-    console.log(clickedCardImageSrc);
+    const clickedCardImageAlt = clickedCardImage.alt // trovo il mio alt
+
+    // ova vado a mettere nel mio modale img e alt
+
+
+
 
 }
 
