@@ -62,3 +62,22 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
     });
 
+// aggiungo addEventlistener a card container
+// il click mi deve selezionare la card con closest(.card)
+// recuperare img src
+// passare la source come innertext di src e alt come alt
+// rimuovere classe d-none + add d-flex
+
+
+cardContainer.addEventListener('click', picClickHandler) 
+
+function picClickHandler () {
+    const card = event.target.closest('.card'); // capiamo se e'stat cliccata una card
+    if (!card) return;
+
+    const clickedCardImage = card.querySelector('.photo'); // identifico img
+    const clickedCardImageSrc = clickedCardImage.src; // trovo src da passare al modale
+    console.log(clickedCardImageSrc);
+
+}
+

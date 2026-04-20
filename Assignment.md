@@ -29,3 +29,10 @@ date: "Sometype Mono", "monospace";
 **Bonus**
 
 rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l'altra ed il titolo abbia una dimensione adeguata
+
+
+#Giorno due
+
+1. con hover scompare il pin e ruota la card
+2. poi si apre img con overlay modale e bottone chiudi
+    prendere z-index e farlo sopra tutti gli ltri elementi con sfondo opacity e poi si mette d-none e si fa apparire quando si clicca, e poi va tolto overflow
