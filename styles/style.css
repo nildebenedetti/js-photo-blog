@@ -140,3 +140,8 @@ body {
     width: 100%;
     
 }
+
+.close-btn {
+    color: white;
+    font-size: 24px;
+}
