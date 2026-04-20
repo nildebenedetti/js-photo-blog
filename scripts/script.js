@@ -34,6 +34,34 @@ function returnCards(ArrayofObjects) {
     return cardContainer.innerHTML = tempContent;
 };
 
+//============= EVENT HANDLERS =============//
+
+// PER LA GESTIONE DEL CLICK SULLE FOTO DELLA GALLERY
+
+function picClickHandler () {
+    const card = event.target.closest('.card'); // il click mi deve selezionare la card con closest(.card) 
+    if (!card) return; // capiamo se e'stat cliccata una card, altrimenti non fare nulla
+
+    const clickedCardImage = card.querySelector('.photo'); // identifico img
+    const clickedCardImageSrc = clickedCardImage.src; // trovo src da passare al modale
+    const clickedCardImageAlt = clickedCardImage.alt // trovo il mio alt
+
+    // ova vado a mettere nel mio modale img e alt
+    modalImage.src = clickedCardImageSrc;
+    modalImage.alt = clickedCardImageAlt;
+    // tolgo d-none e aggiungo d-flex
+    modalContainer.classList.remove('d-none');
+    modalContainer.classList.add('d-flex');
+}
+
+// PER LA GESTIONE DEL CLICK DI USCITA DA MODALE
+
+function btnCloseModalHandler () { // quando click, 
+    modalContainer.classList.remove('d-flex'); // tolgo d-flex
+    modalContainer.classList.add('d-none'); // add d-none e adios modale
+} 
+
+
 //==========================================//
 
 //========== Riferimenti DOM ===============//
@@ -65,36 +93,8 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
         loadingMsg.classList.add('d-none'); // aggiungi utility class d-none al loading message
     });
 
-
-
-// recuperare img src
-// passare la source come innertext di src e alt come alt
-// rimuovere classe d-none + add d-flex
-
 cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventlistener a card container
 
-function picClickHandler () {
-    const card = event.target.closest('.card'); // il click mi deve selezionare la card con closest(.card) 
-    if (!card) return; // capiamo se e'stat cliccata una card, altrimenti non fare nulla
-
-    const clickedCardImage = card.querySelector('.photo'); // identifico img
-    const clickedCardImageSrc = clickedCardImage.src; // trovo src da passare al modale
-    const clickedCardImageAlt = clickedCardImage.alt // trovo il mio alt
-
-    // ova vado a mettere nel mio modale img e alt
-    modalImage.src = clickedCardImageSrc;
-    modalImage.alt = clickedCardImageAlt;
-    // tolgo d-none e aggiungo d-flex
-    modalContainer.classList.remove('d-none');
-    modalContainer.classList.add('d-flex');
-}
-
-
 btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adventlistener per bottone di chiusura del modale
-
-function btnCloseModalHandler () { // quando click, 
-    modalContainer.classList.remove('d-flex'); // tolgo d-flex
-    modalContainer.classList.add('d-none'); // add d-none e adios modale
-} 
 
 
