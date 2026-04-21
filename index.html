@@ -64,12 +64,43 @@
         </div>
     </div>
 
-    <!-- form per aggiungere unímg con input text-->
+    <!-- btn per aggiungere form -->
     <div class="memory-btn-container d-flex">
         <button class="add-memory-btn">
             Aggiungi
         </button>
     </div>
+    <!--form per aggiungere nuova memory-->
+    <div class="new-memory-form-container d-flex date-font">
+        <div class="form-card">
+            <form>
+                <div class="field">
+                    <label class="label" for="ricordo">Il mio ricordo</label>
+                    <div class="control">
+                        <input class="input" type="text" id="ricordo" name="ricordo"
+                            placeholder="Un titolo per il tuo ricordo">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="data">Data</label>
+                    <div class="control">
+                        <input class="input" type="text" id="data" name="data" placeholder="gg-mm-aaaa">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label" for="foto">Foto</label>
+                    <div class="control">
+                        <input class="input" type="file" id="foto" name="foto" accept="image/*">
+                    </div>
+                </div>
+                <div class="control" style="margin-top: 1.5rem;">
+                    <button type="submit" class="button is-primary">Salva Ricordo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <!-- modale con dentro form 
     <div class="form-container d-none">
         <form class="new-picture">
