@@ -83,6 +83,7 @@ const modalContainer = document.querySelector('.modal-container'); // container 
 const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiudere modale
 const btnAddMemory = document.querySelector('.add-memory-btn'); // bottone per mostrare la form
 const containerFormAddNewMemory = document.querySelector('.new-memory-form-container'); // form container
+const btnFormSubmit = document.querySelector('.btn-submit');
 // creo obj con dati del form
 const formDataEl = {
     memomryTitleEl: document.querySelector('#ricordo'),
