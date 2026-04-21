@@ -56,9 +56,17 @@ function picClickHandler() {
 
 // PER LA GESTIONE DEL CLICK DI USCITA DA MODALE
 
-function btnCloseModalHandler() { // quando click, 
+function btnCloseModalClickHandler() { // quando click, 
     modalContainer.classList.remove('d-flex'); // tolgo d-flex
     modalContainer.classList.add('d-none'); // add d-none e adios modale
+}
+
+// Per la gestione di btn add-memory
+
+function btnAddMemoryClickHandler() { // quando click, 
+    containerFormAddNewMemory.classList.remove('d-none'); // tolgo d-none
+    containerFormAddNewMemory.classList.add('d-flex'); // add d-flex et voila il mio form
+    btnAddMemory.classList.add('d-none');
 }
 
 
@@ -98,4 +106,6 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
 
 cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventlistener a card container
 
-btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adventlistener per bottone di chiusura del modale
+btnCloseModal.addEventListener('click', btnCloseModalClickHandler); // aggiungo adventlistener per bottone di chiusura del modale
+
+btnAddMemory.addEventListener('click', btnAddMemoryClickHandler);
