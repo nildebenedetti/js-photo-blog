@@ -69,6 +69,12 @@ function btnAddMemoryClickHandler() { // quando click,
     btnAddMemory.classList.add('d-none');
 }
 
+//per la gestione click btn submit nel form
+
+function btnFormSubmitClickHandler() {
+    event.preventDefault(); // annulla refresh della pagina quando click sul form
+    console.log('submit')
+}
 
 //==========================================//
 
@@ -115,5 +121,7 @@ cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventli
 
 btnCloseModal.addEventListener('click', btnCloseModalClickHandler); // aggiungo adventlistener per bottone di chiusura del modale
 
-btnAddMemory.addEventListener('click', btnAddMemoryClickHandler);
+btnAddMemory.addEventListener('click', btnAddMemoryClickHandler); // add adventListener click Aggiungi Ricordo
+
+btnFormSubmit.addEventListener('click', btnFormSubmitClickHandler); // add eventlistener btn submit nel form
 
