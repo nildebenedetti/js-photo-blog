@@ -1,24 +1,54 @@
 /* media query per layout responsive */
 
-.container-main {
-    margin: 0 auto;
-    padding: 15px 0;
-
-}
-
 .card-container {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 100px;
     gap: 25px;
     max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 
-
+    /* blocco card */
     .card {
+        width: 100%;
+        max-width: 250px;
+        background-color: white;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 20px;
+        box-shadow:
+            /* uso doppia ombra con bassa opaciita'per effetto naturale */
+            0 2px 4px rgba(0, 0, 0, 0.53),
+            0 8px 16px rgba(0, 0, 0, 0.409);
+
+        /*elementi card*/
+        .photo-caption {
+            padding-top: 2px;
+        }
+
+        .photocard-container {
+            width: 100%;
+
+            .photo {
+                width: 100%;
+
+            }
+
+            .pin-container {
+                position: absolute;
+            }
+
+            .pin {
+                position: relative;
+                width: 1.6rem;
+                left: 300%;
+                transform: translate(50%, -120%);
+            }
+
+        }
+
     }
 }
 
