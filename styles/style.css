@@ -127,3 +127,9 @@ body {
     position: relative; /* relativizzo posizione in base a .modal */
     transform: translate(190px, -10px); /* posizioniamo sta icona */
 }
+
+.memory-btn-container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
