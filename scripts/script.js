@@ -83,6 +83,12 @@ const modalContainer = document.querySelector('.modal-container'); // container 
 const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiudere modale
 const btnAddMemory = document.querySelector('.add-memory-btn'); // bottone per mostrare la form
 const containerFormAddNewMemory = document.querySelector('.new-memory-form-container'); // form container
+// creo obj con dati del form
+const formDataEl = {
+    memomryTitleEl: document.querySelector('#ricordo'),
+    memoryDateEl: document.querySelector('#data'),
+    memoryFotoSrc: document.querySelector('#foto')
+}
 let myImgSlider = {};
 
 //=========================================//
@@ -109,3 +115,4 @@ cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventli
 btnCloseModal.addEventListener('click', btnCloseModalClickHandler); // aggiungo adventlistener per bottone di chiusura del modale
 
 btnAddMemory.addEventListener('click', btnAddMemoryClickHandler);
+
