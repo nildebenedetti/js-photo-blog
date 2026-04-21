@@ -97,8 +97,3 @@ fetch(API_URL) // inserisco la fetch - PIANO TEMPORALE PRESENTE
 cardContainer.addEventListener('click', picClickHandler); // aggiungo addEventlistener a card container
 
 btnCloseModal.addEventListener('click', btnCloseModalHandler); // aggiungo adventlistener per bottone di chiusura del modale
-
-
-
-
-
