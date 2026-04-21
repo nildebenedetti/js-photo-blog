@@ -152,8 +152,7 @@ body {
 .close-btn {
     color: white;
     font-size: 30px;
-    position: relative; /* relativizzo posizione in base a .modal */
-    transform: translate(205px, -245px); /* posizioniamo sta icona */
+    position: absolute;
     cursor: pointer; /* ci mette il ditinooo */
 }
 

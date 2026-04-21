@@ -32,9 +32,20 @@
 }
 
 .close-btn {
-    transform: translate(205px, -245px); /* posizioniamo sta icona */
-
+    top: -13%;
+    right: 46%;
 }
+
+
+/* .btn-carousel-prev {
+        transform: translate(-220px, -10px);
+        
+    } 
+
+    .btn-carousel-nxt {
+        translate(168px, -10px)
+    }
+    /*
 
 /* tablet */
 
@@ -84,9 +95,6 @@
         /* posizioniamo sta icona */
     }
 
-     .close-btn {
-        transform: translate(210px, -260px);
-    }
 
 }
 
@@ -129,16 +137,19 @@
     }
 
     .btn-carousel-prev {
-        transform: translate(-260px, -10px);
+        transform: translate(-268px, -10px);
         /* posizioniamo sta icona */
     }
 
     .btn-carousel-nxt {
-        transform: translate(255px, -10px);
+        transform: translate(268px, -10px);
         /* posizioniamo sta icona */
     }
 
     .close-btn {
-        transform: translate(260px, -300px);
+        top: -10%;
+        right: 46%;
+
     }
+
 }
