@@ -73,6 +73,8 @@ const API_URL = 'https://lanciweb.github.io/demo/api/pictures/'; // dichiaro var
 const modalImage = document.querySelector('.modal-image'); // immagine del modale
 const modalContainer = document.querySelector('.modal-container'); // container del modale
 const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiudere modale
+const btnAddMemory = document.querySelector('.add-memory-btn'); // bottone per mostrare la form
+const containerFormAddNewMemory = document.querySelector('.new-memory-form-container'); // form container
 let myImgSlider = {};
 
 //=========================================//
