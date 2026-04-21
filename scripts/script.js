@@ -94,7 +94,7 @@ const btnFormSubmit = document.querySelector('.btn-submit');
 const formDataEl = {
     memomryTitleEl: document.querySelector('#ricordo'),
     memoryDateEl: document.querySelector('#data'),
-    memoryFotoSrc: document.querySelector('#foto'),
+    memoryFotoInpuit: document.querySelector('#foto'),
     memoryFotoThumb: document.querySelector('#anteprima')
 }
 let myImgSlider = {};
