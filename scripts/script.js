@@ -69,12 +69,31 @@ function btnAddMemoryClickHandler() { // quando click,
     btnAddMemory.classList.add('d-none');
 }
 
-//per la gestione click btn submit nel form
+// per la gestione click btn submit nel form
 
 function btnFormSubmitClickHandler() {
     event.preventDefault(); // annulla refresh della pagina quando click sul form
     console.log('submit')
 }
+
+// per la gestione del cambiamento della foto, 
+// per sparare la miniatura nel suo div
+
+function photoInputChangeElemHandler() {
+    const file = this.files[0]; // files e' come value ma per i file, prendiamo il primo
+    // this perche e'ora, quando si scatena lévento
+    if (file) { // se il file e' presente dopo che utente indeciso ha cliccato scegli file
+
+        const linkBlob = URL.createObjectURL(file);
+        formDataEl.memoryFotoThumb.src = linkBlob;
+        formThumbContainer.classList.remove('d-none');
+        formThumbContainer.classList.add('d-flex');
+        console.log(formDataEl.memoryFotoThumb.src);
+        
+    }
+
+}
+
 
 //==========================================//
 
@@ -90,6 +109,7 @@ const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiud
 const btnAddMemory = document.querySelector('.add-memory-btn'); // bottone per mostrare la form
 const containerFormAddNewMemory = document.querySelector('.new-memory-form-container'); // form container
 const btnFormSubmit = document.querySelector('.btn-submit');
+const formThumbContainer = document.querySelector('.form-thumbnail-container')
 // creo obj con dati del form
 const formDataEl = {
     memomryTitleEl: document.querySelector('#ricordo'),
@@ -125,4 +145,7 @@ btnCloseModal.addEventListener('click', btnCloseModalClickHandler); // aggiungo 
 btnAddMemory.addEventListener('click', btnAddMemoryClickHandler); // add adventListener click Aggiungi Ricordo
 
 btnFormSubmit.addEventListener('click', btnFormSubmitClickHandler); // add eventlistener btn submit nel form
+
+formDataEl.memoryFotoInput.addEventListener('change', photoInputChangeElemHandler); // adventlistener per cambiamento img
+
 
