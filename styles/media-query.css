@@ -2,7 +2,8 @@
 
 .card-container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 20px 100px;
     gap: 25px;
     max-width: 500px;
