@@ -34,6 +34,7 @@ function returnCards(ArrayofObjects) {
     return cardContainer.innerHTML = tempContent;
 };
 
+
 //============= EVENT HANDLERS =============//
 
 // PER LA GESTIONE DEL CLICK SULLE FOTO DELLA GALLERY
@@ -73,7 +74,21 @@ function btnAddMemoryClickHandler() { // quando click,
 
 function btnFormSubmitClickHandler() {
     event.preventDefault(); // annulla refresh della pagina quando click sul form
-    console.log('submit')
+   
+    // devo costruire l'oggetto
+    // aggiungo i valori che dovro inserire nell'obj
+    const TitleValue = formDataEl.memomryTitleEl.value;
+    const DateValue = formDataEl.memoryDateEl;
+    const PhotoSrcValue = formDataEl.memoryFotoInput.files[0];
+
+    const newMemory = {
+        title: TitleValue,
+        date: DateValue,
+        url: PhotoSrcValue
+    }
+
+     console.log(newMemory);
+
 }
 
 // per la gestione del cambiamento della foto, 
@@ -89,7 +104,7 @@ function photoInputChangeElemHandler() {
         formThumbContainer.classList.remove('d-none');
         formThumbContainer.classList.add('d-flex');
         console.log(formDataEl.memoryFotoThumb.src);
-        
+
     }
 
 }
@@ -109,7 +124,9 @@ const btnCloseModal = document.querySelector('.close-btn'); // bottone per chiud
 const btnAddMemory = document.querySelector('.add-memory-btn'); // bottone per mostrare la form
 const containerFormAddNewMemory = document.querySelector('.new-memory-form-container'); // form container
 const btnFormSubmit = document.querySelector('.btn-submit');
-const formThumbContainer = document.querySelector('.form-thumbnail-container')
+const formThumbContainer = document.querySelector('.form-thumbnail-container');
+
+
 // creo obj con dati del form
 const formDataEl = {
     memomryTitleEl: document.querySelector('#ricordo'),
