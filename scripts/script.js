@@ -34,6 +34,22 @@ function returnCards(ArrayofObjects) {
     return cardContainer.innerHTML = tempContent;
 };
 
+function returnUserCard(newInput) {
+    
+    const newCard = `<!-- User Card ${newInput.title} --> 
+            <div class="card memory-${newInput.title} d-flex">
+                <div class="photocard-container">
+                    <div class="pin-container">
+                        <img src="./img/pin.svg" alt="" class="pin">
+                    </div>
+                    <img src="${newInput.url}" alt="${newInput.title}" class="photo">
+                    <div class="photo-caption">
+                        <p class="memory-date date-font">${newInput.date}</p>
+                        <p class="memory-name title-font">${newInput.title}</p>
+                    </div>
+                </div>
+            </div>`
+}
 
 //============= EVENT HANDLERS =============//
 
@@ -79,7 +95,8 @@ function btnFormSubmitClickHandler() {
     // aggiungo i valori che dovro inserire nell'obj
     const TitleValue = formDataEl.memomryTitleEl.value;
     const DateValue = formDataEl.memoryDateEl;
-    const PhotoSrcValue = formDataEl.memoryFotoInput.files[0];
+    const ImageObj = formDataEl.memoryFotoInput.files[0];
+    const PhotoSrcValue = URL.createObjectURL(ImageObj);
 
     const newMemory = {
         title: TitleValue,
@@ -87,7 +104,7 @@ function btnFormSubmitClickHandler() {
         url: PhotoSrcValue
     }
 
-     console.log(newMemory);
+   
 
 }
 
