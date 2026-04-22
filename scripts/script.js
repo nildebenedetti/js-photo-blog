@@ -49,6 +49,8 @@ function returnUserCard(newInput) {
                     </div>
                 </div>
             </div>`
+    
+            return cardContainer.innerHTML += newCard;
 }
 
 //============= EVENT HANDLERS =============//
@@ -94,7 +96,7 @@ function btnFormSubmitClickHandler() {
     // devo costruire l'oggetto
     // aggiungo i valori che dovro inserire nell'obj
     const TitleValue = formDataEl.memomryTitleEl.value;
-    const DateValue = formDataEl.memoryDateEl;
+    const DateValue = formDataEl.memoryDateEl.value;
     const ImageObj = formDataEl.memoryFotoInput.files[0];
     const PhotoSrcValue = URL.createObjectURL(ImageObj);
 
@@ -104,7 +106,7 @@ function btnFormSubmitClickHandler() {
         url: PhotoSrcValue
     }
 
-   
+    returnUserCard(newMemory);
 
 }
 
